@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="todo-container">
+        <h1>Tasks</h1>
+        <p class="subtitle">Plan your day, one task at a time , practise every day.</p>
+
+        <form id="task-form">
+            <input
+                type="text"
+                id="task-input"
+                placeholder="Enter a new task..."
+                autocomplete="off"
+                required
+            >
+            <button type="submit">Add Task</button>
+        </form>
+
+        <nav class="filters" aria-label="Filter tasks">
+            <button type="button" class="filter active" data-filter="all">All</button>
+            <button type="button" class="filter" data-filter="active">Active</button>
+            <button type="button" class="filter" data-filter="completed">Completed</button>
+        </nav>
+
+        <p id="task-count">0 tasks remaining</p>
+        <ul id="task-list"></ul>
+        <p id="empty-message">No tasks yet. Add your first task!</p>
+
+        <button type="button" id="clear-completed">Clear Completed</button>
+    </main>
+</body>
+</html>
